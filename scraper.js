@@ -7,8 +7,8 @@ const puppeteer = require('puppeteer');
     });
 
     const page = await browser.newPage();
-    await page.goto('https://smartescrow.eu/');
-    await page.screenshot({path: 'example.png'});
+    await page.goto('https://www.elmundo.es/');
+    await page.pdf({path: 'elMundo.pdf'});
 
     await browser.close();
 })();
