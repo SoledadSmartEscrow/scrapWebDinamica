@@ -1,0 +1,24 @@
+name: scrap
+recipe: lamp
+config:
+  webroot: ./public
+services:
+  appserver:
+    type: php:7.4
+    build_as_root:
+      - apt-get update -y && apt-get install -y libpng-dev libjpeg-dev unzip
+      - docker-php-ext-install gd pdo pdo_mysql
+    overrides:
+      environment:
+        PUPPETEER_SKIP_CHROMIUM_DOWNLOAD: "true"
+  
+  node:
+    type: node:18
+    build_as_root:
+      - apt-get update -y
+      - apt-get install -y libnss3 libx11-xcb1 libxcomposite1 libxdamage1 libxi6 libgconf-2-4 libnss3-dev libasound2 libatk1.0-0 libatk-bridge2.0-0 libpangocairo-1.0-0 libcups2 libxss1 libxrandr2 libgbm-dev libgtk-3-0 wget
+      - wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+      - dpkg -i google-chrome-stable_current_amd64.deb || apt-get install -fy
+      - rm google-chrome-stable_current_amd64.deb
+      - npm install -g npm@latest
+      - npm install puppeteer
