@@ -1,0 +1,18 @@
+{
+  "direccion": "p.has-text-color",
+  "telefonos": [
+    "(+34) 635 65 85 18",
+    "(+34) 680 68 90 33"
+  ],
+  "email": "alberto_p_criado@hotmail.com",
+  "titulos": [
+    "Neumáticos Béjar",
+    "ESTAMOS LISTOS PARA AYUDARTE CON TU VEHÍCULO",
+    "Años de experiencia"
+  ],
+  "parrafos": [
+    "Neumáticos Bejar",
+    "Pre ITV, mantenimiento, cambio de ruedas y todo lo que necesites podrás encontrarlo con nosotros.",
+    "No necesitas tener 4 talleres de confianza  en Neumáticos Béjar podrás confiarnos todo lo que necesita tu vehículo."
+  ]
+}
